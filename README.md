@@ -4,10 +4,12 @@ With todays electrical prices I figured I want to be able to halt my heat-pump f
 
 My heat-pump, an IVT HEE11, has something called "External Control" which is a on/off contact where "on" means the contact is closed and "off" means the contact is open.
 The contact will be a relay-board controlled by a RaspberryPI running `node-red` and using the UI.
+
 ![image](https://user-images.githubusercontent.com/12028885/187433867-c7672fd9-6aa5-4966-9f24-1f642bbc3695.png)
 
 
 In the IVT control settings I can choose what the "External Control" does, and in my case I'm going to set it to block heating and warm water, thus make the heat-pump just sit there waiting until the contact is opened again.
+
 ![image](https://user-images.githubusercontent.com/12028885/187434016-c21886fc-9069-4c46-9978-3bc267740a55.png)
 
 
@@ -24,13 +26,15 @@ In the IVT control settings I can choose what the "External Control" does, and i
 
 - Your heat-pump manual (possibly instructors manual). IVT HE can be found here:
 	- < 2013 year models: https://cdn.jseducation.se/files/pages/6720641855-im-greenline-he-201003-sv-1.pdf
-	- > 2013 year models: https://vpkollen.se/uploaded/manualer/IVT/Installationsm_HE.pdf
-- Some technical know-how of getting into the heat-pump
+	- \> 2013 year models: https://vpkollen.se/uploaded/manualer/IVT/Installationsm_HE.pdf
+- Some technical know-how of getting into the heat-pump (showing the `PEL` card where my connectors are on at terminal `10-C`)
+
 ![image](https://user-images.githubusercontent.com/12028885/187435226-d5ee3a16-1da2-4497-8117-be1acb3a223d.png)
 
 
 ## Electrical pricing API
-We have to use the Entsoe API which is public and free (at least for now). See separate instructions in Entsoe-API-Setup.md.
+We have to use the Entsoe API which is public and free (at least for now). See separate instructions in [Entsoe-API-Setup.md](Entsoe-API-Setup.md).
+
 
 ## Software
 I've built the solution on `node-red` which is installed on all RaspberryPI's from start but you can of course use any other platform that supports node.js and node-red.
@@ -54,3 +58,6 @@ You'll need to install a few extra modules for node-red. In the "Manage palette"
 Once you've installed those you can import my flow from the same menu (chose "Import" obviously)
 
 
+## Version 2...
+
+I'm working on implementing the temperature control so I can force the heat-pump to run if the room temperature goes below a certain point and I am also pondering on adding a sensor on the warm water tank to see if the water goes too cold and then also override and start, even if the price is high...
