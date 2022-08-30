@@ -42,8 +42,8 @@ The node-red flow is added as a separate file here and you'll need to set an env
 
 `export SECURITY_TOKEN=u-u-i-d` (SECURITY_TOKEN, the security token for Entsoe API)
 
-> Add the export to the `.bashrc` of teh user running the node-red process (normally you, so located in your home directory).
-> To add it system-wide (NB! then available to all users) add it in /etc/environment instead
+> Add the export to the `.bashrc` of the user running the node-red process (normally you, so located in your home directory).
+> To add it system-wide (NB! then available to all users) add it in /etc/environment instead.
 
 The flow will run on every hour (on the hour) and request the current price for the hour and then, based on the given cut-off price, pull or release the relay (to block or allow heating).
 
