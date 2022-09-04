@@ -74,6 +74,12 @@ You'll need to install a few extra modules for node-red. In the "Manage palette"
 Once you've installed those you can import my flow from the same menu (chose "Import" obviously)
 
 
+# IVT-HP-PriceControl Advanced
+
+![image](https://user-images.githubusercontent.com/12028885/188323595-5350d378-d92c-4b2e-b521-8417fe820e5b.png)
+
+Offers a bit more control with Day average as the cut-off and a "max average" as a "protection" in case the average becomes very high. Note though that setting Max average might block the heat-pump all day!
+
 ## Version 2...
 
 I'm working on implementing the temperature control so I can force the heat-pump to run if the room temperature goes below a certain point and I am also pondering on adding a sensor on the warm water tank to see if the water goes too cold and then also override and start, even if the price is high...
