@@ -76,7 +76,8 @@ Once you've installed those you can import my flow from the same menu (chose "Im
 
 # IVT-HP-PriceControl Advanced
 
-![image](https://user-images.githubusercontent.com/12028885/188323595-5350d378-d92c-4b2e-b521-8417fe820e5b.png)
+![image](https://user-images.githubusercontent.com/12028885/188323775-ef8b0855-e51a-46fe-8293-b1106cebecff.png)
+
 
 Offers a bit more control with Day average as the cut-off and a "max average" as a "protection" in case the average becomes very high. Note though that setting Max average might block the heat-pump all day!
 
