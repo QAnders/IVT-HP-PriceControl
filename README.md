@@ -43,8 +43,20 @@ The node-red flow is added as a separate file here and you'll need to set an env
 
 `export SECURITY_TOKEN=u-u-i-d` (SECURITY_TOKEN, the security token for Entsoe API)
 
-> Add the export to the `.bashrc` of the user running the node-red process (normally you, so located in your home directory).
-> To add it system-wide (NB! then available to all users) add it in /etc/environment instead.
+> Add the export to the `.bashrc` of the user running the node-red process (normally you, so located in your home directory). You will have to start `node-red` after you have exported the variable!
+
+**NB!** If you run the node-red instance as a service you have to add the env. var to the node-red service config:
+```
+sudo systemctl edit nodered
+# Add the below
+[Service]
+Environment="ENTSOE_SECURITY_TOKEN={your u-u-i-d token}"
+# Save the file (^o) and close it (^x)
+# You can restart your Pi, or run:
+sudo systemctl daemon-reload
+node-red-stop
+node-red-start
+```
 
 The flow will run on every hour (on the hour) and request the current price for the hour and then, based on the given cut-off price, pull or release the relay (to block or allow heating).
 
