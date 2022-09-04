@@ -3,9 +3,10 @@
 With todays electrical prices I figured I want to be able to halt my heat-pump from running during peak prices over the day. This should save me a few bucks as I can prevent it from running when the price is high...
 
 My heat-pump, an IVT HEE11, has something called "External Control" which is a on/off contact where "on" means the contact is closed and "off" means the contact is open.
+You can use "Day Average" price as well for the cut off, in hat case the heat-pump will be allowed to run only when the price is below the days average.
 The contact will be a relay-board controlled by a RaspberryPI running `node-red` and using the UI.
 
-![image](https://user-images.githubusercontent.com/12028885/187433867-c7672fd9-6aa5-4966-9f24-1f642bbc3695.png)
+![image](https://user-images.githubusercontent.com/12028885/188300575-ad7203d8-191f-4f44-9dc9-e862a3d95c25.png)
 
 
 In the IVT control settings I can choose what the "External Control" does, and in my case I'm going to set it to block heating and warm water, thus make the heat-pump just sit there waiting until the contact is opened again.
