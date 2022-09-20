@@ -41,7 +41,7 @@ We have to use the Entsoe API which is public and free (at least for now). See s
 I've built the solution on `node-red` which is installed on all RaspberryPI's from start but you can of course use any other platform that supports node.js and node-red.
 The node-red flow is added as a separate file here and you'll need to set an environment variables by using, e.g:
 
-`export SECURITY_TOKEN=u-u-i-d` (SECURITY_TOKEN, the security token for Entsoe API)
+`export ENTSOE_SECURITY_TOKEN=u-u-i-d` (ENTSOE_SECURITY_TOKEN, the security token for Entsoe API)
 
 > Add the export to the `.bashrc` of the user running the node-red process (normally you, so located in your home directory). You will have to start `node-red` after you have exported the variable!
 
